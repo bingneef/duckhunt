@@ -23,7 +23,7 @@ module.exports = function (shipit) {
     production: {
       servers: 'bing@5.157.85.46',
       branch: 'master',
-      environment: 'develop'
+      environment: 'master'
     }
   });
 
