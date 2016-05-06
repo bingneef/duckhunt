@@ -23,7 +23,12 @@ module.exports = function (shipit) {
     production: {
       servers: 'bing@5.157.85.46',
       branch: 'master',
-      environment: 'master'
+      deployTo: '/var/www/duckhunt/'
+    },
+    develop: {
+      servers: 'bing@5.157.85.46',
+      branch: 'develop',
+      deployTo: '/var/www/duckhunt/'
     }
   });
 

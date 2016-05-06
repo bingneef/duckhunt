@@ -1,7 +1,9 @@
 angular.module 'App'
-  .run ($rootScope, $log, $state, SocketService) ->
+  .run ($rootScope, $log, $state, SocketService, localStorageService) ->
     'ngInject'
     $log.debug 'runBlock end'
+
+    $rootScope.credentials = localStorageService.get('credentials')
 
     $rootScope.$on '$stateChangeSuccess', (event, toState, toParams, fromState, fromParams, options) ->
       if toState.name.indexOf('slave') == 0

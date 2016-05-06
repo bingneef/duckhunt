@@ -1,10 +1,10 @@
 angular.module 'App'
-  .controller 'DuckhuntSlaveController', ($rootScope, $scope, $state, $window, $timeout, $interval, SocketService, SweetAlert) ->
+  .controller 'DuckhuntSlaveController', ($rootScope, $scope, $state, $window, $timeout, $interval, SocketService, SweetAlert, socketCredentials) ->
     'ngInject'
 
     return unless $rootScope.credentials
     room = "#{$rootScope.credentials.email}::#{$rootScope.credentials.pin}"
-    SocketService.initiate({apiKey: 'vZNB1PAEz9EGubfUmE5u', prefix: 'duckhunt'}, room)
+    SocketService.initiate(socketCredentials, room)
 
     $scope.status = {}
     activeLevel = 'duckhunt'
