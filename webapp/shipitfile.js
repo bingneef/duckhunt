@@ -24,7 +24,7 @@ module.exports = function (shipit) {
       branch: 'master',
       deployTo: '/var/www/duckhunt/'
     },
-    develop: {
+    staging: {
       servers: 'bing@5.157.85.46',
       branch: 'develop',
       deployTo: '/var/www/duckhunt/'
