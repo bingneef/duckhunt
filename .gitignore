@@ -4,8 +4,9 @@ tmp
 rails-server
 */bower_components/*
 */node_modules/*
-*/tmp/*
-*/log/*
-*/test/*
-*/bin/*
+*/tmp
+*/dist
+*/log
+*/test
+*/bin
 */.gitignore
