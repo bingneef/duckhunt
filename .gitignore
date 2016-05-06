@@ -1,0 +1,10 @@
+.tmp
+.sass-cache
+rails-server
+*/bower_components/*
+*/node_modules/*
+*/tmp/*
+*/log/*
+*/test/*
+*/bin/*
+*/.gitignore

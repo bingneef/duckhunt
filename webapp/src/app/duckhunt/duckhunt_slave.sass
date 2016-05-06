@@ -1,0 +1,29 @@
+$button-size: 256px
+$font-size: 64px
+
+#duckhunt-slave
+  height: 100vh
+  width: 100vw
+  animation: backgroundFade 2s infinite alternate
+
+  .fire-button, .ready-button, .countdown
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-left: -$button-size / 2
+    margin-top: -$button-size / 2
+    height: $button-size
+    width: $button-size
+    color: white
+    line-height: $button-size
+    font-weight: 700
+    font-size: $font-size
+    background: red
+    border-radius: $button-size
+    text-align: center
+
+@keyframes backgroundFade
+  0%
+    background: #316CFF
+  100%
+    background: #215ffc

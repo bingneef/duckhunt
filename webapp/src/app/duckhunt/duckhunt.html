@@ -1,0 +1,12 @@
+<div id="duckhunt">
+  <div class="countdown" data-ng-if="!gameStarted">
+    <div data-ng-if="state == 'countdown'">
+      {{countdown}}
+    </div>
+    <div data-ng-if="state == 'loaded'">
+      Waiting for controller..
+    </div>
+  </div>
+  <timer class="timer" autostart="false"></timer>
+  <div class="hits"><span data-ng-bind="hits"></span>/<span data-ng-bind="hitsForLevel"></span></div>
+</div>
