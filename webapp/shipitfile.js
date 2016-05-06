@@ -7,7 +7,6 @@ module.exports = function (shipit) {
     default: {
       workspace: '../tmp',
       repositoryUrl: 'git@github.com:bingneef/duckhunt.git',
-      deployTo: '/var/www/duckhunt/',
       dirToCopy: 'webapp/dist',
       ignores: ['.git', 'node_modules', 'bower_components'],
       keepReleases: 10,
