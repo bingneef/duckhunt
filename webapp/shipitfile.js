@@ -6,7 +6,7 @@ module.exports = function (shipit) {
   shipit.initConfig({
     default: {
       workspace: '../tmp',
-      repositoryUrl: 'git@bitbucket.org:bingneef/duckhunt.git',
+      repositoryUrl: 'git@github.com:bingneef/duckhunt.git',
       deployTo: '/var/www/duckhunt/',
       dirToCopy: 'webapp/dist',
       ignores: ['.git', 'node_modules', 'bower_components'],

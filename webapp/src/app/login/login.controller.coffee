@@ -1,5 +1,5 @@
 angular.module 'App'
-  .controller 'LoginController', ($rootScope, $scope, $auth, $location, $state, SocketService, localStorageService, $interval) ->
+  .controller 'LoginController', ($rootScope, $scope, $location, $state, SocketService, localStorageService) ->
     'ngInject'
 
     $scope.loginUser = ->
