@@ -1,11 +1,13 @@
 angular.module 'App'
-  .config ($logProvider, $httpProvider, localStorageServiceProvider) ->
+  .config ($logProvider, $httpProvider, $compileProvider, CookieDomain, localStorageServiceProvider) ->
     'ngInject'
     # Enable log
     $logProvider.debugEnabled true
+    $compileProvider.debugInfoEnabled false
     # Set options third-party lib
     $httpProvider.interceptors.push('AuthenticationInterceptor')
-    localStorageServiceProvider.setPrefix('Duckhunt')
+    localStorageServiceProvider.setPrefix('SnowflakeSimple')
+    localStorageServiceProvider.setStorageCookieDomain(CookieDomain)
 
 
 

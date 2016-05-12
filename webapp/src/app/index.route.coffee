@@ -9,22 +9,19 @@ angular.module 'App'
             controller: 'NavigationController'
             templateUrl: 'app/navigation/navigation.html'
       .state 'slave.duckhunt',
-        url: '/slave/duckhunt'
+        url: '/duckhunt/slave'
         views:
           '@':
             templateUrl: 'app/duckhunt/duckhunt_slave.html'
             controller: 'DuckhuntSlaveController'
             controllerAs: 'duckhunt_slave'
-      .state 'fs',
-        abstract: true
-
-      .state 'fs.login',
-        url: '/login'
+      .state 'splash',
+        url: '/'
         views:
           '@':
-            templateUrl: 'app/login/login.html'
-            controller: 'LoginController'
-            controllerAs: 'login'
+            templateUrl: 'app/splash/splash.html'
+            controller: 'SplashController'
+            controllerAs: 'Splash'
 
       .state 'app',
         abstract: true
@@ -40,4 +37,4 @@ angular.module 'App'
             controller: 'DuckhuntController'
             controllerAs: 'duckhunt'
 
-    $urlRouterProvider.otherwise '/login'
+    $urlRouterProvider.otherwise '/'

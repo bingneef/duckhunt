@@ -19,15 +19,17 @@ module.exports = function (shipit) {
         remote: false
       }
     },
-    production: {
-      servers: 'bing@5.157.85.46',
-      branch: 'master',
-      deployTo: '/var/www/duckhunt/'
-    },
     staging: {
       servers: 'bing@5.157.85.46',
       branch: 'develop',
-      deployTo: '/var/www/duckhunt/'
+      deployTo: '/var/www/duckhunt/',
+      environment: 'development'
+    },
+    production: {
+      servers: 'bing@5.157.85.46',
+      branch: 'master',
+      deployTo: '/var/www/duckhunt/',
+      environment: 'production'
     }
   });
 
