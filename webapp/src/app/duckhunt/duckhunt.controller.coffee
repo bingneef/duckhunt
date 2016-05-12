@@ -2,8 +2,8 @@ angular.module 'App'
   .controller 'DuckhuntController', ($rootScope, $scope, $state, $window, $timeout, $interval, SocketService, socketCredentials) ->
     'ngInject'
 
-    return unless $rootScope.credentials
-    room = "#{$rootScope.credentials.email}::#{$rootScope.credentials.pin}"
+    return unless $rootScope.shallowCredentials
+    room = "#{$rootScope.shallowCredentials.email}::#{$rootScope.shallowCredentials.pin}"
     SocketService.initiate(socketCredentials, room)
 
     $scope.status = {}
@@ -14,7 +14,7 @@ angular.module 'App'
     $scope.countdown = 5
     $scope.state = 'loaded'
 
-    renderer = PIXI.autoDetectRenderer($window.innerWidth, $window.innerHeight, backgroundColor: 0x1099bb)
+    renderer = PIXI.autoDetectRenderer($window.innerWidth, $window.innerHeight, backgroundColor: 0x1fc8db)
     center =
       y: $window.innerHeight / 2
       x: $window.innerWidth / 2
